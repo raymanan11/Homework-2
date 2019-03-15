@@ -12,7 +12,7 @@ def get_menu_choice():
     while selection <= 0:
         selection = int(input('Choose function: '))
     return selection
-    #while loop is written so that selection has to be greater than 0 and if the user input is 0 or less than zero, input is  asked again until greater than 0
+    #while loop is written so that selection has to be greater than 0 and if the user input is 0 or less than zero, input is       asked again until greater than 0
     #the value that the user chose is then returned
 
 def get_phrase():
@@ -20,11 +20,11 @@ def get_phrase():
     while len(phrase) <= 0:
         phrase = input("Enter a phrase: ")
     return phrase
-    #while loop written so at least one character is inputted, if no characters are inputted, input is asked again until one 			character is inputted
+    #while loop written so at least one character is inputted, if no characters are inputted, input is asked again until one 	 character is inputted
 
 def is_palindrome(phrase):
     phrase = phrase.lower()
-    #.lower() function is so that the the user's string will all be lowercase letters so that uppercase letters will become 			lowercase and will be True if letters are the same when compared
+    #.lower() function is so that the the user's string will all be lowercase letters so that uppercase letters will become 	lowercase and will be True if letters are the same when compared
     i = 0
     j = len(phrase) - 1
     #i starts at the beginning of string while j will start at the end of string to compare if beginning and end characters 			equal each other
@@ -41,7 +41,7 @@ def is_palindrome(phrase):
         #else statement will run if phrase[i] and phrase[j] are at letters and will run the if loop to check if the characters 				 phrase[i] and phrase[j] are equal
             if phrase[i] != phrase[j]:
                 return False
-            #if phrase[i] and phrase[j] are equal, that means they are the same character and will continue to run until value 						 of i = j, and will return True meaning it is a palindrome
+            #if phrase[i] and phrase[j] are equal, that means they are the same character and will continue to run until value 			   of i = j, and will return True meaning it is a palindrome
             #if phrase[i] and phrase[j] are not equal, that means that the phrase is not a palindrome and will return False
             i+=1
             j-=1
