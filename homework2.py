@@ -122,7 +122,7 @@ def main():
     selection = get_menu_choice()
     # print_menu() and get_menu_choice() is always called so that it will show up everytime when run
     # get_menu_choice() is saved in a variable selection so that it can be used in a loop to continue asking user to enter a function if user enters selection 1 or 2, but quits on selection 3
-    while selection True:
+    while True:
         if selection == 1:
             menu_check_palindrome()
         elif selection == 2:
@@ -134,6 +134,7 @@ def main():
         selection = get_menu_choice()
         # after user runs through the if and elif clause, it will print_menu() and ask for the users selection again if user chooses 1 or 2. If user enters 1 or 2 it will go through while loop again or quit if user enters 3
         #if user enters anything bigger than 3 such as 4, 5, or 6, the loop will cause the user to be asked for a function again until user enters 1, 2, or 3
+
 main()
         
         
