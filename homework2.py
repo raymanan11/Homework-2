@@ -90,7 +90,7 @@ def menu_check_crossword_square():
 def main():
     print_menu()
     selection = get_menu_choice()
-    while selection <=2:
+    while selection <= 2:
         if selection == 1:
             menu_check_palindrome()
         elif selection == 2:
