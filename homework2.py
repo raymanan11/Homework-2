@@ -67,14 +67,38 @@ def check_crossword_square(square):
     for i in range(0, len(square), order):
         horizontal_words = square[i:i+order]
         check_horizontal_words = EnglishDictionary.is_word(horizontal_words)
-        #print(check_horizontal_words)
     for i in range(0, order):
         vertical_words = square[i::order]
         check_vertical_words = EnglishDictionary.is_word(vertical_words)
-        #print(check_vertical_words)
     if check_horizontal_words == True and check_vertical_words == True:
         return True
     return False
+
+def menu_check_crossword_square():
+    crossword_string = get_crossword_square()
+    print()
+    crossword_square = check_crossword_square(crossword_string)
+    order = int(math.sqrt(len(crossword_string)))
+    for i in range(0, len(crossword_string), order):
+        horizontal_words = crossword_string[i:i+order]
+        print(horizontal_words)
+    if crossword_square == True:
+        print('is a crossword square!')
+    else:
+        print('is not a crossword square!')
+
+def main():
+    print_menu()
+    selection = get_menu_choice()
+    while selection <=2:
+        if selection == 1:
+            menu_check_palindrome()
+        elif selection == 2:
+            menu_check_crossword_square()
+        print_menu()
+        selection = get_menu_choice()
+
+main()
         
         
         
