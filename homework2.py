@@ -16,6 +16,7 @@ def get_menu_choice():
     return selection
     #while loop is written so that selection has to be greater than 0 and if the user input is 0 or less than zero, input is asked again until greater than 0
     #the value that the user chose is then returned
+    # if user's selection is 3 then they chose to quit and will print Bye!
 
 def get_phrase():
     phrase = ''
@@ -128,11 +129,11 @@ def main():
             menu_check_crossword_square()
         elif selection ==3:
             break
-        #while loop is written so it will continue to ask the user for the function if selection is 1 or 2
+        #while loop is written so it will continue to ask the user for the function if selection is 1 or 2 and will quit and print Bye! from the function get_menu_choice() and will continue to ask the user for a function if user chooses anything bigger than 3
         print_menu()
         selection = get_menu_choice()
-        # after user runs through the if and elif clause, it will print_menu() and ask for the users selection again. If user enters 1 or 2 it will go through while loop again or quit if user enters 3
-
+        # after user runs through the if and elif clause, it will print_menu() and ask for the users selection again if user chooses 1 or 2. If user enters 1 or 2 it will go through while loop again or quit if user enters 3
+        #if user enters anything bigger than 3 such as 4, 5, or 6, the loop will cause the user to be asked for a function again until user enters 1, 2, or 3
 main()
         
         
