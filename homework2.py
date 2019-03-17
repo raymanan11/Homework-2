@@ -11,6 +11,8 @@ def get_menu_choice():
     selection = 0
     while selection <= 0:
         selection = int(input('Choose function: '))
+    if selection == 3:
+        print('Bye!')
     return selection
     #while loop is written so that selection has to be greater than 0 and if the user input is 0 or less than zero, input is asked again until greater than 0
     #the value that the user chose is then returned
