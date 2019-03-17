@@ -99,13 +99,17 @@ def check_crossword_square(square):
 
 def menu_check_crossword_square():
     crossword_string = get_crossword_square()
+    # the function get_crossword_square() is called giving us a concatenated string of all the words the user entered and is stored in variable crossword_string
     print()
     crossword_square = check_crossword_square(crossword_string)
+    # the function check_crossword_square() is called with the users concatenated string variable crossword_string in the parameter and is stored in variable crossword_square
     order = int(math.sqrt(len(crossword_string)))
     for i in range(0, len(crossword_string), order):
         horizontal_words = crossword_string[i:i+order]
+        # in order to get horizontal words to print out in the output we would use the previous method to get horizontal words (see function check_crossword_square)
         print(horizontal_words)
     if crossword_square == True:
+    # crossword_square gives us a boolean value if it is a crossword square and if it is True and equals True then it will print out is a crossword square, if False prints is not a crossword square
         print('is a crossword square!')
     else:
         print('is not a crossword square!')
@@ -113,13 +117,17 @@ def menu_check_crossword_square():
 def main():
     print_menu()
     selection = get_menu_choice()
+    # print_menu() and get_menu_choice() is always called so that it will show up everytime when run
+    # get_menu_choice() is saved in a variable selection so that it can be used in a loop to continue asking user to enter a function if user enters selection 1 or 2, but quits on selection 3
     while selection <= 2:
         if selection == 1:
             menu_check_palindrome()
         elif selection == 2:
             menu_check_crossword_square()
+        #while loop is written so it will continue to ask the user for the function if selection is 1 or 2
         print_menu()
         selection = get_menu_choice()
+        # after user runs through the if and elif clause, it will print_menu() and ask for the users selection again. If user enters 1 or 2 it will go through while loop again or quit if user enters 3
 
 main()
         
