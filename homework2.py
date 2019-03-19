@@ -57,9 +57,9 @@ def menu_check_palindrome():
     phrase = get_phrase()
     palindrome = is_palindrome(phrase)
     if palindrome == True:
-        print(phrase, 'is a palindrome!')
+        print('"' + phrase + '"', 'is a palindrome!')
     else:
-        print(phrase, 'is not a palindrome!')
+        print('"' + phrase + '"', 'is not a palindrome!')
 
 def get_crossword_square():
     st = input('Please enter the first word of the square: ')
@@ -130,11 +130,12 @@ def main():
             menu_check_crossword_square()
         elif selection ==3:
             break
-        #while loop is written so it will continue to ask the user for the function if selection is 1 or 2 and will quit and print Bye! from the function get_menu_choice() and will continue to ask the user for a function if user chooses anything bigger than 3
+        # while loop is written so it will continue to ask the user for the function if selection is 1 or 2 and will quit and print Bye! from the function get_menu_choice() and will continue to ask the user for a function if user chooses anything bigger than 3
+        # when user selects option 3, it will print Bye! and exit the loop, hence the break
         print_menu()
         selection = get_menu_choice()
         # after user runs through the if and elif clause, it will print_menu() and ask for the users selection again if user chooses 1 or 2. If user enters 1 or 2 it will go through while loop again or quit if user enters 3
-        #if user enters anything bigger than 3 such as 4, 5, or 6, the loop will cause the user to be asked for a function again until user enters 1, 2, or 3
+        # if user enters anything bigger than 3 such as 4, 5, or 6, the loop will cause the user to be asked for a function again until user enters 1, 2, or 3
 
 main()
         
